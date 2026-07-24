@@ -34,8 +34,9 @@ finish-args:
   - --env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons
   # Required to use the UnityLauncherAPI
   - --talk-name=com.canonical.Unity
-  # Read-only access to the home directory to allow loading of user images
+  # Read-only access to the home directory and to secondary drives to allow loading of user images
   - --filesystem=home:ro
+  - --filesystem=/mnt:ro
 cleanup:
   - /include
   - /lib/pkgconfig
