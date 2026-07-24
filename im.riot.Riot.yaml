@@ -34,6 +34,9 @@ finish-args:
   - --env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons
   # Required to use the UnityLauncherAPI
   - --talk-name=com.canonical.Unity
+  # Required for drag 'n drop
+  - --filesystem=home:ro
+  - --filesystem=/mnt:ro
 cleanup:
   - /include
   - /lib/pkgconfig
